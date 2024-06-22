@@ -72,3 +72,8 @@ output "route_names" {
   value       = [for route in module.routes.routes : route.name]
   description = "The route names associated with this VPC"
 }
+
+output "vpc_access_connectors" {
+  value       = module.vpc_access_connectors.vpc_access_connectors
+  description = "The list of vpc access connectors created"
+}
