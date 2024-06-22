@@ -193,3 +193,12 @@ variable "private_services_networks" {
   default     = []
   description = "List of private services network. This will be ignored if empty"
 }
+
+variable "vpc_access_connectors" {
+  type = list(object({
+    name          = string
+    ip_cidr_range = string
+  }))
+  default     = []
+  description = "List of VPC access connector. This will be ignored if empty"
+}
