@@ -90,3 +90,13 @@ module "private_services_networks" {
   project_id                = var.project_id
   private_services_networks = var.private_services_networks
 }
+
+/******************************************
+	VPC Access Connector
+ *****************************************/
+module "vpc_access_connectors" {
+  source                = "./modules/vpc-access-connectors"
+  project_id            = var.project_id
+  network_name          = var.network_name
+  vpc_access_connectors = var.vpc_access_connectors
+}
